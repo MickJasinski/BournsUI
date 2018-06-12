@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    color: #fff;
+    background: rgb(70, 152, 207);
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    height: 100px;
+}
+
+header a {
+    display: block;
+    float: left;
+    padding: 5px 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo img {
+    display: inline-block;
+    width: 250px;
+    filter: brightness(1000%);
+    position: absolute;
+    top: -20px;
+    left: 20px;
+}
+
+.nav-desktop {
+    display: none;
+    text-align: right;
+}
+
+.nav-mobile {
+    z-index: 1000;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100vh;
+    background: rgba(73, 160, 218, .8);
+    transition: .3s ease;
+}
+
+.nav-mobile ul {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.nav-mobile li a {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.active {
+    right: 0;
+}
+
+.burger {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    line-height: 30px;
+    font-size: 2em;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .nav-desktop {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-desktop li {
+        display: inline;
+    }
+
+    .nav-desktop li a{
+        display: inline-block;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+}
