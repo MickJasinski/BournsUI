@@ -15,6 +15,10 @@ li {
     list-style: none;
 }
 
+.site {
+    max-width: 1400px;
+}
+
 header {
     height: 100px;
 }
@@ -103,6 +107,8 @@ header a {
     }
     
     .nav-desktop li a:hover {
+        text-decoration: none;
+        color: #fff;
         background: rgba(73, 160, 218, .8);
     }
 
@@ -120,11 +126,12 @@ header a {
     color: #fff;
     padding: 120px 30px 30px 30px; }
     .values h1 {
-      font-size: 36px;
+      font-size: 22px;
       float: left;
       padding: 10px 30px;
       display: block;
-      width: 320px; }
+      width: 320px;
+      text-transform: uppercase; }
     .values i {
       font-size: 60px;
       padding-bottom: 40px;
@@ -150,10 +157,19 @@ header a {
 
 .guarantee {
     padding: 20px;
+    display: flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .guarantee h2 {
+    margin: 30px auto;
+}
+
+.quality {
+    width: calc(100%-20px);
+    max-width: 800px;
     margin: 30px auto;
 }
 
@@ -162,3 +178,69 @@ header a {
     border-top: 1px solid #fff;
     padding: 10px;
 }
+
+.slideshow img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    z-index: 10;
+}
+
+.slideshow h2 {
+    display: inline-block;
+    background: linear-gradient(to right, rgba(73, 160, 218, .8), rgba(0, 0, 0, 0));
+    position: relative;
+    top: -100px;
+    padding: 10px 100px 10px 20px;
+}
+
+@media (max-width: 767px) {
+    .slideshow h2 {
+        font-size: 1.4em;
+    }
+}
+
+.slide-cover {
+    display: block;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(73, 160, 218, .5);
+    background-blend-mode: multiply;
+    z-index: 1000;
+    transition: .3s ease;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.slide-cover:hover {
+    background-color: rgba(73, 160, 218, .1);
+}
+
+@media (max-width: 767px) {
+    .slideshow img {
+        height: calc(92vh - 100px);
+    }
+    .slide-cover {
+        height: calc(92vh - 100px);
+    }
+}
+
+.slick-dots {
+    position: relative;
+    top: -112px;
+}
+
+.slick-dots li button:before {
+    color: rgb(70, 152, 207);
+    opacity: 100;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #fff;
+} 
+
